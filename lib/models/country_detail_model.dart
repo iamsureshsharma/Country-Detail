@@ -1,16 +1,16 @@
-class CountryDetail {
+class CountryDetailModel {
   String? title;
   List<Rows>? rows;
   String? error;
 
   // Default constructor
 
-  CountryDetail({this.title, this.rows, this.error});
+  CountryDetailModel({this.title, this.rows, this.error});
 
   // Named factory constructor to fill the data from json
 
-  factory CountryDetail.fromJson(Map<String, dynamic> json) {
-    return CountryDetail(
+  factory CountryDetailModel.fromJson(Map<String, dynamic> json) {
+    return CountryDetailModel(
       title: json['title'],
       rows: getRowsList(json),
     );
@@ -28,8 +28,8 @@ class CountryDetail {
 
   // Named constuructor to get capture the error (if any)
 
-  factory CountryDetail.withError(String? errorMessage) {
-    return CountryDetail(error: errorMessage);
+  factory CountryDetailModel.withError(String? errorMessage) {
+    return CountryDetailModel(error: errorMessage);
   }
 }
 
