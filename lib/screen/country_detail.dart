@@ -60,7 +60,7 @@ class _CountryDetailState extends State<CountryDetail> {
                 }
               } else if (snapshot.error != null) {
                 return Center(
-                  child: Text(snapshot.error.toString()),
+                  child: Text(snapshot.error.toString(),textAlign: TextAlign.center,),
                 );
               } else {
                 return const Center(
